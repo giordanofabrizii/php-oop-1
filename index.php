@@ -1,20 +1,12 @@
 <?php 
 
-class Movie {
-    public $title;
-    public $year;
-    public $genre;
+require_once __DIR__ . '/models/movie.php';
 
-    public function __construct($title, $year, $genre) {
-        $this->title = $title;
-        $this->year = $year;
-        $this->genre = $genre;
-    }
-    
-}
+$rawdata = file_get_contents('./utilities/db.json');
 
-$movie1 = new Movie("A","2020","b")
+$data = json_decode($rawdata, true);
 
+// $m = new Movie("ciao", "ciao", new genre("blu"));
 ?>
 
 <!DOCTYPE html>
@@ -26,13 +18,15 @@ $movie1 = new Movie("A","2020","b")
 </head>
 <body>
     <main>
-        <?php 
-        
-            echo $movie1->title;
-            echo $movie1->year;
-            echo $movie1->genre;
+        <?php foreach($data as $film) { ?>
+            <?php $element = new Movie($film['title'], $film['poster'], $film['genre']); ?>
+            <article>
+                <h1> <?php echo $element->title ?> </h1>
+                <img src="<?php echo $element->poster ?>" alt="poster path">
+                <p> Genre: <?php echo $element->genre ?></p>
 
-        ?>
+            </article>
+        <?php } ?>
     </main>
 </body>
 </html>
