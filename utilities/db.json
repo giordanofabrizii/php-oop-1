@@ -2,11 +2,31 @@
     {
         "title": "Furiosa - A Mad Max Saga",
         "poster": "/uYfY4dpVCdsuWd6v4cR7W1RBTDS.jpg",
-        "genre": "12"
+        "genre": ["Azione","Avventura"]
+    },
+    {
+        "title": "Inside Out",
+        "poster": "/1LZMmVOVsP9SWJDhEZiY9cCMNyp.jpg",
+        "genre": ["Animazione","Commedia","Famiglia"]
+    },
+    {
+        "title": "Trigger Warning",
+        "poster": "/6XJM3C47iGOK9nFU6yLFCSf4U5c.jpg",
+        "genre": ["Thriller"]
+    },
+    {
+        "title": "Godzilla x Kong: The New Empire",
+        "poster": "/2iezS60gl7L1jauBSTSy9davvlK.jpg",
+        "genre": ["Fantascienza","Drammatico"]
+    },
+    {
+        "title": "Under Paris",
+        "poster": "/ty7tl4h34bfqqa2g09SaObFhFW7.jpg",
+        "genre": ["Horror"]
     },
     {
         "title": "Kingdom of the Planet of the Apes",
         "poster": "/nHAmd6yp025PqjHGD3VzfBssxFp.jpg",
-        "genre": "12"
+        "genre": ["Avventura","Drammatico"]
     }
 ]

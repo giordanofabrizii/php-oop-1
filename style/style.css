@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.article-container{
+    background-color: rgb(94, 94, 94);
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    display: flex;
+    color: white;
+}
+
+article{
+    min-width: 23rem;
+    height: 35rem;
+    margin: 1rem;
+}
+
+article > img{
+    height: 100%;
+    width: 100%;
+}

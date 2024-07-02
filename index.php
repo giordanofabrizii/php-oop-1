@@ -6,7 +6,6 @@ $rawdata = file_get_contents('./utilities/db.json');
 
 $data = json_decode($rawdata, true);
 
-// $m = new Movie("ciao", "ciao", new genre("blu"));
 ?>
 
 <!DOCTYPE html>
@@ -15,18 +14,32 @@ $data = json_decode($rawdata, true);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OOP 1</title>
+
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
     <main>
-        <?php foreach($data as $film) { ?>
-            <?php $element = new Movie($film['title'], $film['poster'], $film['genre']); ?>
-            <article>
-                <h1> <?php echo $element->title ?> </h1>
-                <img src="<?php echo $element->poster ?>" alt="poster path">
-                <p> Genre: <?php echo $element->genre ?></p>
-
-            </article>
-        <?php } ?>
+        <div class="article-container">
+            <?php foreach($data as $film) { ?>
+                <?php $element = new Movie($film['title'], $film['poster'], $film['genre']); ?>
+                <article>
+    
+                    <h1> <?php echo $element->title ?> </h1>
+                    <img src="<?php echo $element->poster ?>" alt="poster path">
+                    <p><?php 
+                        foreach($element->genre as $index => $genre) {
+                            if ($index != count($element->genre) - 1) {
+                                echo $genre . ', ';
+                            } else {
+                                echo $genre;
+                            }
+                        }
+                    ?></p>
+    
+                </article>
+            <?php } ?>
+        </div>
     </main>
+
 </body>
 </html>
